@@ -1,5 +1,12 @@
 pipeline {
     agent any
+    
+    tools{
+        maven 'maven 3.5.4'
+        jdk '1.8.0_201'
+        nodejs 'NodeJs 11.8.0'
+    }
+    
     environment { 
         GIT_BOT = "${env.git_bot}"
         GIT_HUB_SCM = 'https://github.com/elvisdominguez7/Apps.git'
